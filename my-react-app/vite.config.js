@@ -7,7 +7,7 @@ const repoName = 'react-folder' // Your repository name
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: `/${repoName}/`,
+  base: './',
   server: {
     port: 5174,
     proxy: {
@@ -24,5 +24,14 @@ export default defineConfig({
       ? 'https://your-backend-url.com/api'  // Replace with your actual backend URL
       : 'http://localhost:5173/api'
     )
+  },
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   }
 })
