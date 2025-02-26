@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  background: linear-gradient(180deg, rgb(100, 116, 139) 0%, rgb(148, 163, 184) 100%);
+  padding: 15px;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.practice-name {
+  flex: 1;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.5rem;
+  color: rgb(241, 245, 249);
+  text-align: center;
+  min-width: 300px;
+  margin: 0.5rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+  hyphens: auto;
+  
+}
+
+.practice-address {
+  flex: 1;
+  font-family: 'Manrope', sans-serif;
+  text-align: justify;
+  color: rgb(226, 232, 240);
+  margin: 0.5rem;
+  font-size: 1rem;
+  word-wrap: break-word;
+  hyphens: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    background: linear-gradient(180deg, rgb(100, 116, 139) 0%, rgb(148, 163, 184) 100%);
+  }
+
+  .practice-name {
+    font-size: 1.2rem;
+    margin: 0.3rem;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .practice-address {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0.3rem;
+  }
+}

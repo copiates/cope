@@ -1,0 +1,68 @@
+.brand-new {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  background: rgb(255, 255, 255);  
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+  text-align: justify;
+}
+
+.brand-new:hover {
+  transform: translateY(-5px);
+}
+
+.brand-new h2 {
+  text-align: center;
+  color: #00509d;  
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.brand-new h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 4px;
+  background: rgb(31, 41, 55);  
+  border-radius: 2px;
+}
+
+.brand-new p {
+  color: rgb(55, 65, 81);  
+  line-height: 1.8;
+}
+
+.brand-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .brand-wrapper {
+    padding: 50px 0;
+  }
+
+  .brand-new {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .brand-new h2 {
+    font-size: 20px;
+  }
+
+  .brand-new p {
+    font-size: 0.9rem;
+  }
+}

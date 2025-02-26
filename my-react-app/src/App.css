@@ -1,0 +1,157 @@
+/* Reset and base styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main layout containers */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 23, 42);
+}
+
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 23, 42);
+}
+
+/* Page specific containers */
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 23, 42);
+}
+
+.services-container,
+.about-container,
+.tax-calculator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px); /* Adjust based on your navbar height */
+  background-color: rgb(15, 23, 42);
+}
+
+.gradient__bg {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 23, 42);
+}
+
+/* Footer positioning */
+.footer-container {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.App {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  background-color: rgb(15, 23, 42);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 23, 42);
+}
+
+.container {
+  flex: 1;
+  background-color: rgb(15, 23, 42);
+}
+
+/* Update all container backgrounds */
+.app-container,
+.main-content,
+.home-container,
+.services-container,
+.about-container,
+.tax-calculator,
+.gradient__bg,
+.App,
+main,
+.container {
+  background-color: rgb(243, 244, 246);  /* Light gray background */
+}
+
+/* Height-based media queries */
+@media screen and (max-height: 800px) {
+  .navbar {
+    padding: 0.3rem 25px;
+  }
+
+  .home-link img {
+    width: 80px;
+    height: 60px;
+  }
+
+  .navbar-links a,
+  .dropdown-button {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .tax-banner {
+    padding: 4px 0;
+  }
+
+  .navbar {
+    padding: 0.2rem 20px;
+  }
+
+  .home-link img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .navbar-links a,
+  .dropdown-button {
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .navbar-contact p {
+    font-size: 1rem;
+  }
+}
