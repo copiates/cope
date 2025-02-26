@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import logo from '../../assets/ca-logo.png';
 import callIcon from '../../assets/call-icon.png';
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = (e) => {
+    e.preventDefault();
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className="navbar-wrapper">
       <div className="tax-banner">
@@ -18,15 +25,15 @@ const Navbar = () => {
         </div>
         <div className="navbar-links">
           <Link to="">Home</Link>
-          <div className="dropdown">
-            <button className="dropdown-button">
+          <div className={`dropdown ${isDropdownOpen ? 'active' : ''}`}>
+            <button className="dropdown-button" onClick={toggleDropdown}>
               Services
               <span className="arrow"></span>
             </button>
             <div className="dropdown-content">
-              <Link to="services/itr">Income Tax Filing</Link>
-              <Link to="services/partnership">Partnership Deed</Link>
-              <Link to="services/accounting">Accounting Services</Link>
+              <Link to="services/itr" onClick={() => setIsDropdownOpen(false)}>Income Tax Filing</Link>
+              <Link to="services/partnership" onClick={() => setIsDropdownOpen(false)}>Partnership Deed</Link>
+              <Link to="services/accounting" onClick={() => setIsDropdownOpen(false)}>Accounting Services</Link>
             </div>
           </div>
           <Link to="about">About</Link>

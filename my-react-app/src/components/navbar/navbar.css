@@ -226,8 +226,8 @@
     max-height: calc(100vh - 200px);
     overflow-y: auto;
     margin: 0;
-    background-color: #f8f9fa;
-    border: 1px solid #e9ecef;
+    background-color: rgb(100, 116, 139);
+    border: 1px solid rgba(241, 245, 249, 0.1);
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
@@ -241,8 +241,9 @@
     padding: 10px 15px;
     text-align: left;
     font-size: 1rem;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid rgba(241, 245, 249, 0.1);
     white-space: nowrap;
+    color: rgb(241, 245, 249);
   }
 
   .navbar-contact {

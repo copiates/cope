@@ -9,7 +9,7 @@ const cache = new NodeCache({ stdTTL: 3600 });
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5174', // Your frontend URL
+  origin: ['http://localhost:5174', 'https://copiates.github.io'],
   credentials: true
 }));
 app.use(express.json());
@@ -20,31 +20,20 @@ app.use((req, res, next) => {
   next();
 });
 
-// Modified cache middleware
-const cacheMiddleware = (key, duration) => {
-  return (req, res, next) => {
-    const cachedData = cache.get(key);
-    
-    if (cachedData) {
-      return res.json(cachedData);
-    }
-    
-    // Store original res.json function
-    const originalJson = res.json;
-    
-    // Override res.json method
-    res.json = function(data) {
-      // Store in cache before sending
-      cache.set(key, data, duration);
-      return originalJson.call(this, data);
-    };
-    
-    next();
-  };
+// Cache middleware
+const cacheMiddleware = (duration) => (req, res, next) => {
+  const key = req.originalUrl;
+  const cachedResponse = cache.get(key);
+
+  if (cachedResponse) {
+    res.json(cachedResponse);
+    return;
+  }
+  next();
 };
 
 // Services Routes with 1-hour cache
-app.get('/api/services/itr', cacheMiddleware('itr_services', 3600), (req, res) => {
+app.get('/api/services/itr', cacheMiddleware(3600), (req, res) => {
   res.json({
     title: "Income Tax Return Filing",
     features: [
@@ -55,7 +44,7 @@ app.get('/api/services/itr', cacheMiddleware('itr_services', 3600), (req, res) =
   });
 });
 
-app.get('/api/services/partnership', cacheMiddleware('partnership_services', 3600), (req, res) => {
+app.get('/api/services/partnership', cacheMiddleware(3600), (req, res) => {
   res.json({
     title: "Partnership Deed Services",
     features: [
@@ -67,7 +56,7 @@ app.get('/api/services/partnership', cacheMiddleware('partnership_services', 360
   });
 });
 
-app.get('/api/services/accounting', cacheMiddleware('accounting_services', 3600), (req, res) => {
+app.get('/api/services/accounting', cacheMiddleware(3600), (req, res) => {
   res.json({
     title: "Accounting Services",
     features: [
@@ -81,24 +70,21 @@ app.get('/api/services/accounting', cacheMiddleware('accounting_services', 3600)
 });
 
 // About Route with 1-day cache
-app.get('/api/about', cacheMiddleware('about', 86400), (req, res) => {
-  res.json({
-    company: "B.V. SWAMI & CO.",
-    established: 2000,
-    partners: [
+app.get('/api/about', cacheMiddleware(3600), (req, res) => {
+  const data = {
+    team: [
       {
-        name: "CA. Venugopal Swami B, FCA",
-        qualification: "Fellow Member of ICAI",
-        experience: "Since 1999"
+        name: "CA. VENUGOPAL SWAMI. B FCA",
+        description: "A Commerce Graduate from Sri Venkateswara University..."
       },
       {
-        name: "CA. Venkataramana S, FCA",
-        qualification: "Fellow Member of ICAI",
-        experience: "Since 2002"
+        name: "CA. VENKATARAMANA. S FCA",
+        description: "A Commerce Graduate from Sri Venkateswara University..."
       }
-    ],
-    address: "No 3440, SR Harmony, 4th Cross, 10th Main Rd, Bengaluru, Karnataka-560038"
-  });
+    ]
+  };
+  cache.set(req.originalUrl, data);
+  res.json(data);
 });
 
 // Tax Calculator Route - No cache as it needs fresh calculations
@@ -115,8 +101,8 @@ app.post('/api/tax/calculate', (req, res) => {
 });
 
 // Home Route with 1-hour cache
-app.get('/api/home', cacheMiddleware('home', 3600), (req, res) => {
-  res.json({
+app.get('/api/home', cacheMiddleware(3600), (req, res) => {
+  const data = {
     header: {
       companyName: "B.V. Swami & Co, Chartered Accountants",
       address: "No 3440, SR Harmony, 4th Cross, 10th Main Rd, Bengaluru, Karnataka-560038"
@@ -129,7 +115,9 @@ app.get('/api/home', cacheMiddleware('home', 3600), (req, res) => {
         "Those associated with the firm have regular interaction with industry and other professionals which enables the firm to keep pace with contemporary developments and to meet the needs of its clients."
       ]
     }
-  });
+  };
+  cache.set(req.originalUrl, data);
+  res.json(data);
 });
 
 // Add static file serving for production

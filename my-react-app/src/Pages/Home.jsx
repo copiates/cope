@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Header } from '../containers'
 import { Brand } from '../components'
 import { Footer } from '../containers'
+import { fetchApi } from '../utils/api'
 import './Home.css'
 
 const fallbackData = {
@@ -20,20 +21,28 @@ const fallbackData = {
 };
 
 const Home = () => {
-  const [homeData, setHomeData] = useState(null);
+  const [homeData, setHomeData] = useState(fallbackData);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Try to fetch data, use fallback if fetch fails
-    fetch('/api/home')
-      .then(response => response.json())
-      .then(data => setHomeData(data))
-      .catch(error => {
-        console.error('Error fetching home data:', error);
-        setHomeData(fallbackData);
-      });
+    let mounted = true;
+
+    const loadData = async () => {
+      const data = await fetchApi('/home');
+      if (mounted && data) {
+        setHomeData(data);
+      }
+      setLoading(false);
+    };
+
+    loadData();
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
-  if (!homeData) return <div className="home-container"><div>Loading...</div></div>;
+  if (loading) return <div className="home-container"><div>Loading...</div></div>;
 
   return (
     <div className="home-container">
@@ -45,7 +54,7 @@ const Home = () => {
       </div>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
