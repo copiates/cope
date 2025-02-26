@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Get the repository name from package.json or environment variable
-const repoName = 'react-folder' // Your repository name
+// Replace 'react-folder' with your GitHub repository name
+const repoName = 'react-folder'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './',
+  base: `/${repoName}/`,
   server: {
     port: 5174,
     proxy: {

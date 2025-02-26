@@ -31,5 +31,6 @@
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://copiates.github.io/react-folder"
 }
