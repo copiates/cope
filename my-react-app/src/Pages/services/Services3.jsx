@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './services.css'
 import Footer from '../../containers/footer/Footer';
 
+const fallbackData = {
+  title: "Accounting Services",
+  features: [
+    "Bookkeeping and Accounting",
+    "Financial Statement Preparation",
+    "Bank Reconciliation",
+    "Payroll Processing",
+    "GST Compliance",
+    "TDS Returns",
+    "Financial Analysis and Reporting"
+  ]
+};
+
 const Services3 = () => {
   const [serviceData, setServiceData] = useState(null);
 
@@ -9,7 +22,10 @@ const Services3 = () => {
     fetch('/api/services/accounting')
       .then(response => response.json())
       .then(data => setServiceData(data))
-      .catch(error => console.error('Error fetching accounting service data:', error));
+      .catch(error => {
+        console.error('Error fetching accounting service data:', error);
+        setServiceData(fallbackData);
+      });
   }, []);
 
   if (!serviceData) return <div>Loading...</div>;

@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './services.css'
 import Footer from '../../containers/footer/Footer';
 
+const fallbackData = {
+  title: "Partnership Deed Services",
+  features: [
+    "Partnership Deed Drafting",
+    "Partnership Firm Registration",
+    "Partnership Deed Modification",
+    "GST Registration for Partnership",
+    "Legal Compliance Support",
+    "Business Structure Consultation",
+    "Partner Rights and Responsibilities"
+  ]
+};
+
 const Services2 = () => {
   const [serviceData, setServiceData] = useState(null);
 
@@ -9,7 +22,10 @@ const Services2 = () => {
     fetch('/api/services/partnership')
       .then(response => response.json())
       .then(data => setServiceData(data))
-      .catch(error => console.error('Error fetching partnership service data:', error));
+      .catch(error => {
+        console.error('Error fetching partnership service data:', error);
+        setServiceData(fallbackData);
+      });
   }, []);
 
   if (!serviceData) return <div>Loading...</div>;

@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import './services.css'
 import Footer from '../../containers/footer/Footer';
 
+const fallbackData = {
+  title: "Income Tax Return Filing Services",
+  features: [
+    "Individuals (Salaried, Business/Profession)",
+    "Hindu Undivided Family (HUF)",
+    "Partnership Firms",
+    "Limited Liability Partnership (LLP)",
+    "Private Limited Companies",
+    "Non-Profit Organizations (NPO)",
+    "Charitable Trusts"
+  ]
+};
+
 const Services1 = () => {
   const [serviceData, setServiceData] = useState(null);
 
@@ -9,7 +22,10 @@ const Services1 = () => {
     fetch('/api/services/itr')
       .then(response => response.json())
       .then(data => setServiceData(data))
-      .catch(error => console.error('Error fetching ITR service data:', error));
+      .catch(error => {
+        console.error('Error fetching ITR service data:', error);
+        setServiceData(fallbackData);
+      });
   }, []);
 
   if (!serviceData) return <div>Loading...</div>;
