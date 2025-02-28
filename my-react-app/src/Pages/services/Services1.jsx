@@ -1,48 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './services.css'
 import Footer from '../../containers/footer/Footer';
 
-const fallbackData = {
-  title: "Income Tax Return Filing Services",
-  features: [
-    "Individuals (Salaried, Business/Profession)",
-    "Hindu Undivided Family (HUF)",
-    "Partnership Firms",
-    "Limited Liability Partnership (LLP)",
-    "Private Limited Companies",
-    "Non-Profit Organizations (NPO)",
-    "Charitable Trusts"
-  ]
-};
-
 const Services1 = () => {
-  const [serviceData, setServiceData] = useState(null);
-
-  useEffect(() => {
-    fetch('/api/services/itr')
-      .then(response => response.json())
-      .then(data => setServiceData(data))
-      .catch(error => {
-        console.error('Error fetching ITR service data:', error);
-        setServiceData(fallbackData);
-      });
-  }, []);
-
-  if (!serviceData) return <div>Loading...</div>;
-
   return (
     <div>
       <div className="services-container">
         <div className="service-card">
-          <h3>{serviceData.title}</h3>
+          <h3>Registration Services</h3>
           <div className="service-content">
-            <p>Professional Income Tax Return filing service for:</p>
+            <p>We provide comprehensive registration services for:</p>
             <ul>
-              {serviceData.features.map((feature, index) => (
-                <li key={index}>{feature}</li>
-              ))}
+              <li>ESI - Employee State Insurance</li>
+              <li>PF - Provident Fund</li>
+              <li>PTR - Professional Tax Registration</li>
+              <li>Labour Registration</li>
+              <li>Shops and Establishments Registration</li>
+              <li>GST - Goods and Services Tax Registration</li>
+              <li>Proprietorship Firm Registration</li>
+              <li>Partnership Firm Registration</li>
+              <li>LLP - Limited Liability Partnership Registration</li>
+              <li>One Person Company Registration</li>
+              <li>Private Limited Company Registration</li>
+              <li>IE Code - Import Export Code Registration</li>
+              <li>LAE - Legal Entity Identifier (LEI) Registration</li>
             </ul>
-            <button className="service-button">Get Started</button>
           </div>
         </div>
       </div>
@@ -52,4 +34,3 @@ const Services1 = () => {
 }
 
 export default Services1
-

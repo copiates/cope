@@ -1,203 +1,159 @@
-.brand {
-  margin: auto;
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.brand h2 {
-  text-align: center;
-  color: #00509d;
-}
-
-.brand ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  color: rgb(55, 65, 81);
-}
-
-.brand li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-  color: rgb(55, 65, 81);
-}
-
 .services-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
   padding: 2rem;
-  flex-wrap: wrap;
   min-height: calc(100vh - 180px);
+  background-color: rgb(243, 244, 246);
 }
 
-.service-card {
+.service-card, .brand {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
   margin: auto;
-  background: rgb(255, 255, 255);
-  border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  overflow: hidden;
-  padding: 1.5rem;
-  width: 400px;
-  color: rgb(55, 65, 81);
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.service-card h3 {
+.service-card h3, .brand h2 {
   color: #00509d;
-  font-size: 1.8rem;
+  text-align: center;
+  font-size: var(--font-size-2xl);
+  margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 1rem;
-  text-align: center;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
-.service-card h3::after {
+.service-card h3::after, .brand h2::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 4px;
-  background: rgb(75, 85, 99);
+  width: 60px;
+  height: 3px;
+  background: #00509d;
   border-radius: 2px;
 }
 
-.service-content {
-  padding: 1rem;
+.service-content, .brand {
   color: rgb(55, 65, 81);
 }
 
 .service-content p {
-  margin-bottom: 1rem;
+  font-size: var(--font-size-lg);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: var(--line-height-relaxed);
+  color: rgb(55, 65, 81);
+  letter-spacing: var(--letter-spacing-normal);
 }
 
-.service-content ul {
+.service-content ul, .brand ul {
   list-style-type: none;
   padding: 0;
-  margin-bottom: 1rem;
 }
 
-.service-content li {
+.service-content ul li, .brand > ul > li {
+  padding: 0.8rem 0;
   margin: 0.5rem 0;
-  padding-left: 1.5rem;
   position: relative;
+  padding-left: 1.5rem;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: rgb(55, 65, 81);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-normal);
 }
 
-.service-content li:before {
+.service-content ul li:before, .brand > ul > li:before {
   content: "•";
-  color: rgb(75, 85, 99);
+  color: #00509d;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Nested lists styling */
+.brand ul ul {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+}
+
+.brand ul ul li {
+  padding: 0.4rem 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.brand ul ul li:before {
+  content: "◦";
+  color: #4b5563;
   position: absolute;
   left: 0;
 }
 
-.service-button {
-  width: 100%;
-  padding: 0.8rem;
-  background:  #00509d;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
+/* Update contact information style */
+.service-content p:last-child {
+  font-size: var(--font-size-base);
+  color: rgb(55, 65, 81);
+  font-weight: 500;
 }
 
-.service-button:hover {
-  background: rgb(55, 65, 81);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Add these media queries at the end of the file */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
   .services-container {
     padding: 1rem;
-    gap: 1rem;
   }
 
-  .service-card {
-    width: 100%;
-    max-width: none;
-    padding: 1rem;
+  .service-card, .brand {
+    padding: 1.5rem;
+    margin: 0.5rem;
   }
 
-  .service-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .service-content {
-    padding: 0.5rem;
+  .service-card h3, .brand h2 {
+    font-size: var(--font-size-xl);
   }
 
   .service-content p {
-    font-size: 0.9rem;
+    font-size: var(--font-size-base);
   }
 
-  .service-content li {
-    font-size: 0.9rem;
+  .service-content ul li, .brand > ul > li {
+    font-size: var(--font-size-sm);
   }
 
-  .brand {
-    width: 90%;
-    margin: 15px auto;
+  .brand ul ul li {
+    font-size: 0.9rem;
+    padding: 0.3rem 0 0.3rem 1rem;
   }
 }
 
 /* Height-based media queries */
 @media screen and (max-height: 800px) {
   .services-container {
-    padding: 1.5rem;
-    gap: 1.5rem;
     min-height: calc(100vh - 150px);
-  }
-
-  .service-card {
-    padding: 1.2rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .service-content {
-    padding: 0.8rem;
   }
 }
 
 @media screen and (max-height: 600px) {
   .services-container {
-    padding: 1rem;
-    gap: 1rem;
     min-height: calc(100vh - 120px);
+    padding: 0.8rem;
   }
 
-  .service-card {
+  .service-card, .brand {
     padding: 1rem;
   }
 
-  .service-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .service-content {
-    padding: 0.6rem;
-  }
-
-  .service-content p,
-  .service-content li {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
+  .service-card h3, .brand h2 {
+    font-size: 1.3rem;
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
   }
 }

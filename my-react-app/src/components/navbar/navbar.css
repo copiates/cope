@@ -142,10 +142,10 @@
 .dropdown-content {
   position: absolute;
   background: rgb(100, 116, 139);
-  min-width: 200px;
+  min-width: 160px;
   box-shadow: var(--box-shadow);
   border-radius: 8px;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
@@ -162,11 +162,13 @@
 
 .dropdown-content a {
   color: rgb(241, 245, 249);
-  padding: 12px 16px;
+  padding: 6px 10px;
   text-decoration: none;
   display: block;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  letter-spacing: -0.2px;
 }
 
 .dropdown-content a:hover {
@@ -221,7 +223,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    min-width: 180px;
+    min-width: 160px;
     max-width: 90vw;
     max-height: calc(100vh - 200px);
     overflow-y: auto;
@@ -238,9 +240,9 @@
   }
 
   .dropdown-content a {
-    padding: 10px 15px;
+    padding: 8px 12px;
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border-bottom: 1px solid rgba(241, 245, 249, 0.1);
     white-space: nowrap;
     color: rgb(241, 245, 249);
@@ -299,8 +301,8 @@
   }
 
   .dropdown-content a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 6px 10px;
+    font-size: 0.75rem;
   }
 
   .navbar-contact {
@@ -328,13 +330,13 @@
   }
 
   .dropdown-content {
-    min-width: 160px;
+    min-width: 140px;
     max-height: calc(100vh - 120px);
   }
 
   .dropdown-content a {
-    padding: 6px 10px;
-    font-size: 0.9rem;
+    padding: 5px 8px;
+    font-size: 0.7rem;
   }
 
   .navbar-contact img {

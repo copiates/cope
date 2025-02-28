@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Header } from '../containers'
 import { Brand } from '../components'
 import { Footer } from '../containers'
-import { fetchApi } from '../utils/api'
 import './Home.css'
 
 const fallbackData = {
@@ -21,40 +20,13 @@ const fallbackData = {
 };
 
 const Home = () => {
-  const [homeData, setHomeData] = useState(fallbackData);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    let mounted = true;
-
-    const loadData = async () => {
-      const data = await fetchApi('/home');
-      if (mounted && data) {
-        setHomeData(data);
-      }
-      setLoading(false);
-    };
-
-    loadData();
-
-    return () => {
-      mounted = false;
-    };
-  }, []);
-
-  if (loading) return <div className="home-container"><div>Loading...</div></div>;
-
   return (
     <div className="home-container">
-      <div>
-        <Header data={homeData.header} />
-      </div>
-      <div className="brand-section">
-        <Brand data={homeData.brand} />
-      </div>
+      <Header data={fallbackData.header} />
+      <Brand data={fallbackData.brand} />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

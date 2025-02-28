@@ -31,9 +31,9 @@ const Navbar = () => {
               <span className="arrow"></span>
             </button>
             <div className="dropdown-content">
-              <Link to="services/itr" onClick={() => setIsDropdownOpen(false)}>Income Tax Filing</Link>
-              <Link to="services/partnership" onClick={() => setIsDropdownOpen(false)}>Partnership Deed</Link>
-              <Link to="services/accounting" onClick={() => setIsDropdownOpen(false)}>Accounting Services</Link>
+              <Link to="services/itr" onClick={() => setIsDropdownOpen(false)}>Registration Services</Link>
+              <Link to="services/partnership" onClick={() => setIsDropdownOpen(false)}>Filing Services </Link>
+              <Link to="services/accounting" onClick={() => setIsDropdownOpen(false)}>Financial Services</Link>
             </div>
           </div>
           <Link to="about">About</Link>
