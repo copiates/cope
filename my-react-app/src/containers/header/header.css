@@ -10,29 +10,32 @@
 }
 .practice-name {
   flex: 1;
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.5rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-2xl);
   color: rgb(241, 245, 249);
   text-align: center;
   min-width: 300px;
   margin: 0.5rem;
-  line-height: 1.5;
+  line-height: var(--line-height-tight);
   word-wrap: break-word;
   hyphens: auto;
-  
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
 .practice-address {
   flex: 1;
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--font-family);
   text-align: justify;
   color: rgb(226, 232, 240);
   margin: 0.5rem;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   word-wrap: break-word;
   hyphens: auto;
   display: flex;
   flex-direction: column;
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
 }
 
 @media screen and (max-width: 768px) {
@@ -41,7 +44,7 @@
   }
 
   .practice-name {
-    font-size: 1.2rem;
+    font-size: var(--font-size-xl);
     margin: 0.3rem;
     min-width: unset;
     width: 100%;
@@ -49,7 +52,7 @@
 
   .practice-address {
     text-align: center;
-    font-size: 0.9rem;
+    font-size: var(--font-size-sm);
     margin: 0.3rem;
   }
 }
