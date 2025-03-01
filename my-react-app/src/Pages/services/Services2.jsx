@@ -1,5 +1,5 @@
 import React from 'react';
-import './services.css'
+import './services1&2.css'
 import Footer from '../../containers/footer/Footer';
 
 const Services2 = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
-import './services.css'
+import { Link } from 'react-router-dom';
+import './services1&2.css'
 import Footer from '../../containers/footer/Footer';
 
 const Services1 = () => {
@@ -13,81 +14,81 @@ const Services1 = () => {
             <ul>
               <li>
                 ESI - Employee State Insurance
-                <a href="https://www.esic.gov.in/registration" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/esi" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 PF - Provident Fund
-                <a href="https://www.epfindia.gov.in/site_en/index.php" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/pf" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 PTR - Professional Tax Registration
-                <a href="https://www.karnataka.gov.in/professionalTax" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/ptr" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 Labour Registration
-                <a href="https://labour.gov.in/registration" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/labour" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 Shops and Establishments Registration
-                <a href="https://qlabour.gov.in/NewClsService/Registration_of_Shops.html" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/shops" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 GST - Goods and Services Tax Registration
-                <a href="https://www.gst.gov.in/help/registration" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/gst" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 Proprietorship Firm Registration
-                <a href="https://udyamregistration.gov.in" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/proprietorship" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 Partnership Firm Registration
-                <a href="https://www.mca.gov.in/MinistryV2/llpfirm.html" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/partnership" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 LLP - Limited Liability Partnership Registration
-                <a href="https://www.mca.gov.in/MinistryV2/llphome.html" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/llp" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 One Person Company Registration
-                <a href="https://www.mca.gov.in/MinistryV2/incorporation_company.html" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/opc" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 Private Limited Company Registration
-                <a href="https://www.mca.gov.in/MinistryV2/incorporation_company.html" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/private-limited" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 IE Code - Import Export Code Registration
-                <a href="https://dgft.gov.in/iec" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/ie-code" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
               <li>
                 LAE - Legal Entity Identifier (LEI) Registration
-                <a href="https://lei.legal" target="_blank" rel="noopener noreferrer" className="docs-btn">
+                <Link to="/documents/lei" className="docs-btn">
                   Documents Required
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
