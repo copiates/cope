@@ -30,15 +30,15 @@ const App = () => {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/tax" element={<Tax />} />
-        <Route path="/services">
+        <Route index element={<Home />} />
+        <Route path="tax" element={<Tax />} />
+        <Route path="services">
           <Route path="registration" element={<Services1 />} />
           <Route path="filing" element={<Services2 />} />
           <Route path="financial-services" element={<Services3 />} />
         </Route>
-        <Route path="/about" element={<About />} />
-        <Route path="/documents">
+        <Route path="about" element={<About />} />
+        <Route path="documents">
           <Route path="esi" element={<ESI />} />
           <Route path="pf" element={<PF />} />
           <Route path="ptr" element={<PTR />} />
