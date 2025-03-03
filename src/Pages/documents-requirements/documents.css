@@ -64,6 +64,11 @@
   margin-top: 0;
 }
 
+/* Add spacing between consecutive h4 elements */
+.doc-content h4 + h4 {
+  margin-top: 2.5rem;
+}
+
 .doc-content ul {
   list-style-type: none;
   padding: 0;
