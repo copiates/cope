@@ -33,19 +33,17 @@ jobs:
           cache: 'npm'
           
       - name: Clean Install Dependencies
-        working-directory: ./my-react-app
         run: npm ci
         
       - name: Build
-        working-directory: ./my-react-app
         run: |
           npm run build
-          cp dist/index.html dist/404.html
+          cp build/index.html build/404.html
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: my-react-app/dist
+          path: build
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
