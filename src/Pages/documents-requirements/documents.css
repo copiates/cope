@@ -1,7 +1,7 @@
 .doc-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 2rem;
   min-height: calc(100vh - 180px);
   background-color: rgb(243, 244, 246);
@@ -10,8 +10,8 @@
 .doc-card {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
   width: 100%;
   max-width: 800px;
   margin: auto;
@@ -21,7 +21,7 @@
   color: #00509d;
   text-align: center;
   font-size: var(--font-size-2xl);
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   position: relative;
   padding-bottom: 1rem;
   font-weight: 600;
@@ -34,15 +34,40 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60px;
+  width: 80px;
   height: 3px;
   background: #00509d;
   border-radius: 2px;
 }
 
+.doc-card > h4 {
+  color: #1a365d;
+  font-size: var(--font-size-lg);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.doc-content {
+  margin-top: 1.5rem;
+}
+
+.doc-content h4 {
+  color: #2c5282;
+  font-size: var(--font-size-lg);
+  margin: 2rem 0 1rem;
+  font-weight: 500;
+  border-left: 3px solid #00509d;
+  padding-left: 1rem;
+}
+
+.doc-content h4:first-of-type {
+  margin-top: 0;
+}
+
 .doc-content ul {
   list-style-type: none;
   padding: 0;
+  margin: 0 0 1.5rem;
 }
 
 .doc-content ul li {
@@ -50,7 +75,7 @@
   padding-left: 1.5rem;
   position: relative;
   font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
+  line-height: 1.6;
   color: rgb(55, 65, 81);
 }
 
@@ -62,6 +87,13 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.2rem;
+}
+
+.doc-content ul li:hover {
+  color: #2c5282;
+  background-color: rgba(0, 80, 157, 0.05);
+  border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -76,9 +108,17 @@
 
   .doc-card h2 {
     font-size: var(--font-size-xl);
+    margin-bottom: 1.5rem;
+  }
+
+  .doc-card > h4,
+  .doc-content h4 {
+    font-size: var(--font-size-base);
   }
 
   .doc-content ul li {
     font-size: var(--font-size-sm);
+    padding: 0.6rem 0;
+    padding-left: 1.2rem;
   }
 } 
