@@ -8,8 +8,8 @@ const Partnership = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Partnership Registration</h2>
+          <p>The documents required to be submitted to Registrar for registration of a Partnership Firm are:</p>
           <div className="doc-content">
-            <p>The documents required to be submitted to Registrar for registration of a Partnership Firm are:</p>
             <ul>
               <li>Application for registration of partnership (Form 1)</li>
               <li>Certified original copy of Partnership Deed</li>

@@ -8,9 +8,9 @@ const PrivateLimited = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Private Limited Company Registration</h2>
-          <p>The following documents required for private limited company registration are:</p>
+          <h4>The following documents required for private limited company registration are:</h4>
           <div className="doc-content">
-            <h4>For Indian Nationals:</h4>
+            <h4>For Indian Nationals</h4>
             <ul>
               <li>Self-attested PAN card copy</li>
               <li>Passport-sized photo</li>
@@ -18,14 +18,14 @@ const PrivateLimited = () => {
               <li>Proof of identity</li>
               <li>Address proof</li>
             </ul>
-            <h4>For Foreign Nationals:</h4>
+            <h4>For Foreign Nationals</h4>
             <ul>
               <li>Notarized documents</li>
               <li>Passport-sized photo</li>
               <li>Passport</li>
               <li>Address proof</li>
             </ul>
-            <h4>Registered Office Documents:</h4>
+            <h4>Registered Office Documents</h4>
             <ul>
               <li>Proof of business address</li>
               <li>Copy of the rent agreement (if applicable)</li>

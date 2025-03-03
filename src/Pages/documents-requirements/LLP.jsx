@@ -8,7 +8,7 @@ const LLP = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for LLP Registration</h2>
-          <p>The following documents required for LLP Registration are:</p>
+          <h4>The following documents required for LLP Registration are:</h4>
           <div className="doc-content">
               <h4>For Partners / Promoters</h4>
               <ul>
@@ -22,8 +22,7 @@ const LLP = () => {
                 <li>Proof of Registered Address – Sale Deed / Rental Agreement</li>
                 <li>Copy of Utility bill – (EB, Telephone Bill, Property Tax Receipt, Water Tax Bill) for proposed company address not older than 2 months</li>
                 <li>NOC from owner / occupier of the property to use the premises as registered office</li>
-              </ul>
-            
+              </ul>  
           </div>
         </div>
       </div>

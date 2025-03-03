@@ -8,7 +8,7 @@ const LEI = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Legal Entity Identifier Registration</h2>
-          <p>The following documents required for legal entity identifier registration are:</p>
+          <h4>The following documents required for legal entity identifier registration are:</h4>
           <div className="doc-content">
             <h4>Partnership</h4>
             <ul>

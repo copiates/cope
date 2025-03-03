@@ -8,26 +8,26 @@ const EmployeeInsuranceFiling = () => {
       <div className="doc-container">
         <div className="doc-card">
         <h2>Documents required for Employee Insurance Return Filing</h2>
-        <p>The documents required while filing employee insurance returns are:</p>
+        <h4>The documents required while filing employee insurance returns are:</h4>
           <div className="doc-content">
-            <h4>Employee Records:</h4>
+            <h4>Employee Records</h4>
             <ul>
               <li>Attendance Log</li>
               <li>Wages Register</li>
               <li>Employee Details (including ESI contributions)</li>
               <li>Organization's Attendance Records</li>
             </ul>
-            <h4>Forms and Filings:</h4>
+            <h4>Forms and Filings</h4>
             <ul>
               <li>Form 6 (for ESI filing)</li>
               <li>ESI Challans and Returns (monthly contributions)</li>
             </ul>
-            <h4>Workplace Compliance:</h4>
+            <h4>Workplace Compliance</h4>
             <ul>
               <li>Accident Report List</li>
               <li>Inspection Book (for ESI inspections)</li>
             </ul>
-            <h4>Additional Documents for Compliance:</h4>
+            <h4>Additional Documents for Compliance</h4>
             <ul>
               <li>Registration Certificate/License (under Shops and Establishments Act)</li>
               <li>Certificate of Incorporation (for companies)</li>

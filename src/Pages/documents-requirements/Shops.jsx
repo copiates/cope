@@ -8,16 +8,16 @@ const Shops = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Shops & Establishments Registration</h2>
-          <p>The following documents required for shops & establishments registration are:</p>
+          <h4>The following documents required for shops & establishments registration are:</h4>
           <div className="doc-content">
-            <h4>For Sole Proprietorship:</h4>
+            <h4>For Sole Proprietorship</h4>
             <ul>
               <li>PAN card</li>
               <li>Address proof (utility bill, rental agreement, etc.)</li>
               <li>Rental agreement (if applicable)</li>
               <li>Passport-sized photographs of the owner</li>
             </ul>
-            <h4>For Partnership Firms:</h4>
+            <h4>For Partnership Firms</h4>
             <ul>
               <li>PAN card of the firm</li>
               <li>Partnership deed</li>
@@ -25,7 +25,7 @@ const Shops = () => {
               <li>Rental agreement</li>
               <li>Passport-sized photographs of all partners</li>
             </ul>
-            <h4>For Private Limited Companies:</h4>
+            <h4>For Private Limited Companies</h4>
             <ul>
               <li>PAN card of the company</li>
               <li>Certificate of Incorporation</li>
