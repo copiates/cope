@@ -26,6 +26,7 @@ const GSTDocuments = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
