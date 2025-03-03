@@ -52,7 +52,7 @@ const App = () => {
           <Route path="private-limited" element={<PrivateLimited />} />
           <Route path="ie-code" element={<IECode />} />
           <Route path="lei" element={<LEI />} />
-          <Route path="itr" element={<ITRDocuments />} />
+          <Route path="itr-documents" element={<ITRDocuments />} />
           <Route path="gst-documents" element={<GSTDocuments />} />
           <Route path="pt-documents" element={<PTDocuments />} />
           <Route path="esi-documents" element={<ESIDocuments />} />
