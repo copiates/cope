@@ -47,6 +47,30 @@
   font-weight: 500;
 }
 
+.doc-content h3 {
+  color: #1a365d;
+  font-size: calc(var(--font-size-lg) * 1.15);
+  margin: 2.5rem 0 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #00509d;
+  position: relative;
+}
+
+.doc-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #4299e1;
+}
+
+.doc-content h3:first-of-type {
+  margin-top: 1.5rem;
+}
+
 .doc-content {
   margin-top: 1.5rem;
 }
@@ -119,6 +143,12 @@
   .doc-card > h4,
   .doc-content h4 {
     font-size: var(--font-size-base);
+  }
+
+  .doc-content h3 {
+    font-size: var(--font-size-lg);
+    margin: 2rem 0 1.2rem;
+    padding-bottom: 0.5rem;
   }
 
   .doc-content ul li {
