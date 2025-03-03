@@ -9,13 +9,15 @@ const PFDocuments = () => {
     <div>
       <div className="doc-container">
         <div className="doc-card">
-        <h2>Documents required for Provident Fund Return Filing</h2>
-        <p>The documents required while filing provident fund returns are:</p>
+          <h2>Documents required for Provident Fund Return Filing</h2>
+          <h4>The documents required while filing provident fund returns are:</h4>
           <div className="doc-content">
-          <li>Employer's contribution amount to EPF</li>
-          <li>Employee's contribution amount to EPF</li>
-          <li>ECR (Electronic Challan cum Return) Challan copy</li>
-          <li>Details of UAN (Universal Account Number), with KYC compliance, of employees</li>
+            <ul>
+              <li>Employer's contribution amount to EPF</li>
+              <li>Employee's contribution amount to EPF</li>
+              <li>ECR (Electronic Challan cum Return) Challan copy</li>
+              <li>Details of UAN (Universal Account Number), with KYC compliance, of employees</li>
+            </ul>
           </div>
         </div>
       </div>
