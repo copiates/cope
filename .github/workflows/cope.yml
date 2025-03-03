@@ -38,10 +38,11 @@ jobs:
 
       - name: Build
         run: |
-          npm run build
+          PUBLIC_URL="https://copiates.github.io/cope" npm run build
           cp build/index.html build/404.html
         env:
           CI: false
+          NODE_ENV: production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
