@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 // Replace 'react-folder' with your GitHub repository name
 const repoName = 'react-folder'
@@ -7,16 +8,15 @@ const repoName = 'react-folder'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: `/${repoName}/`,
+  base: '/',  // Use root path
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   server: {
     port: 5174,
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5173',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
+    open: true
   },
   define: {
     // Add this to make the API URL available in your React code
@@ -27,11 +27,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    },
+    assetsDir: 'assets'
   }
 })
