@@ -44,7 +44,7 @@ const GST = () => {
               <li>Memorandum of Association / Articles of Association</li>
               <li>PAN card and Aadhar card of authorized signatory. The authorised signatory must be an Indian even in case of foreign companies/branch registration</li>
             </ul>
-            <h4>Documents Required for GST Registration Based on the Nature of Business Activity:</h4>
+            <h3>Documents Required for GST Registration Based on the Nature of Business Activity:</h3>
             <h4>Normal taxpayer Registration (including composition dealer, government departments and ISD registrations)</h4>
             <ul>
               <li>PAN card of Company (only in case of Company)</li>
