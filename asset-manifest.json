@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cope/static/css/main.0a4a9f03.css",
+    "main.css": "/cope/static/css/main.bdefa098.css",
     "main.js": "/cope/static/js/main.c3f4c20a.js",
     "static/media/ca-logo-2.png": "/cope/static/media/ca-logo-2.350945617376871a10f2.png",
     "static/media/whatsapp2.jpg": "/cope/static/media/whatsapp2.b5a62ecdbe1776260ed8.jpg",
     "index.html": "/cope/index.html",
-    "main.0a4a9f03.css.map": "/cope/static/css/main.0a4a9f03.css.map",
+    "main.bdefa098.css.map": "/cope/static/css/main.bdefa098.css.map",
     "main.c3f4c20a.js.map": "/cope/static/js/main.c3f4c20a.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a4a9f03.css",
+    "static/css/main.bdefa098.css",
     "static/js/main.c3f4c20a.js"
   ]
 }
