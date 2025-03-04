@@ -23,7 +23,9 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header data={fallbackData.header} />
-      <Article />
+      <div>
+        <Article />
+      </div>
       <Brand data={fallbackData.brand} />
       <Footer />
     </div>
