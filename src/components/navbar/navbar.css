@@ -52,13 +52,13 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: rgb(241, 245, 249);
 }
 
 .home-link img {
   width: 100px;
   height: 75px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .navbar-links {
@@ -88,14 +88,46 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 10px;
-  max-width: 200px;
+  max-width: 225px;
 }
 
-.navbar-contact img {
-  width: 24px;
-  height: 24px;
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* WhatsApp icon styles for desktop */
+.whatsapp-icon {
+  width: 50px;
+  height: 36px;
   object-fit: contain;
+  background: transparent;
+}
+
+/* WhatsApp icon styles for tablets */
+@media screen and (max-width: 1024px) {
+  .whatsapp-icon {
+    width: 50px;
+    height: 36px;
+  }
+}
+
+/* WhatsApp icon styles for mobile devices */
+@media screen and (max-width: 768px) {
+  .whatsapp-icon {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+/* WhatsApp icon styles for small mobile devices */
+@media screen and (max-width: 480px) {
+  .whatsapp-icon {
+    width: 50px;
+    height: 36px;
+  }
 }
 
 .navbar-contact p {
@@ -192,6 +224,7 @@
   .home-link img {
     width: 60px;
     height: 45px;
+    filter: brightness(0) invert(1);
   }
 
   .navbar-links {

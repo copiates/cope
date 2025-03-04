@@ -13,6 +13,7 @@ const Tax = () => {
   const [section80C, setSection80C] = useState(0);
   const [section80D, setSection80D] = useState(0);
   const [section80TTA, setSection80TTA] = useState(0);
+  const [otherDeductions, setOtherDeductions] = useState(0);
   const [taxableIncomeOld, setTaxableIncomeOld] = useState(0);
   const [taxableIncomeNew, setTaxableIncomeNew] = useState(0);
   const [taxOld, setTaxOld] = useState(0);
@@ -41,7 +42,8 @@ const Tax = () => {
     const standardDeductionOld = 50000;
     const totalDeductions = Math.min(150000, Number(section80C)) + 
                           Math.min(25000, Number(section80D)) + 
-                          Math.min(10000, Number(section80TTA));
+                          Math.min(10000, Number(section80TTA)) +
+                          Number(otherDeductions);
 
     const totalIncomeOld =
       annualBasicSalary +
@@ -224,6 +226,15 @@ const Tax = () => {
             value={section80TTA}
             onChange={(e) => setSection80TTA(Number(e.target.value) || 0)}
             placeholder="Savings Account Interest"
+          />
+        </div>
+        <div className="input-group">
+          <label>Other Deductions:</label>
+          <input
+            type="number"
+            value={otherDeductions}
+            onChange={(e) => setOtherDeductions(Number(e.target.value) || 0)}
+            placeholder="Others"
           />
         </div>
 

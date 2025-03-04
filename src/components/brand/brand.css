@@ -48,7 +48,7 @@
 
 @media screen and (max-width: 768px) {
   .brand-wrapper {
-    padding: 50px 0;
+    width: 100%;
   }
 
   .brand-new {

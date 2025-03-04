@@ -89,7 +89,7 @@ const Services1 = () => {
                 </Link>
               </li>
               <li>
-                LAE - Legal Entity Identifier (LEI) Registration
+                LEI - Legal Entity Identifier Registration
                 <Link to="/documents/lei" className="docs-btn" onClick={scrollToTop}>
                   Documents Required
                 </Link>

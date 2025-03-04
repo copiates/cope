@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
-import logo from '../../assets/ca-logo.png';
+import logo from '../../assets/ca-logo3.png';
 import callIcon from '../../assets/call-icon.png';
+import whatsappIcon from '../../assets/whatsapp.png';
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -44,7 +45,9 @@ const Navbar = () => {
           <Link to="/about" onClick={ handleLinkClick}>About</Link>
         </div>
         <div className="navbar-contact">
-          <img src={callIcon} alt="Phone Icon" />
+          <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" className="whatsapp-link">
+            <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon" />
+          </a>
           <p>+91 9845643599</p>
         </div>
       </div>
