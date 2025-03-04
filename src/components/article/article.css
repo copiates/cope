@@ -1,22 +1,20 @@
 .article-container {
-  text-align: center;
-  padding: 20px;
-}
-
-.article-container h1 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
 }
 
 .article-container a {
-  display: inline-block;
-  margin-top: 20px;
+  display: block;
 }
 
 .article-container img {
-  width: 100px;
+  width: 60px;
   height: auto;
   transition: transform 0.3s ease;
+  background-color: transparent;
+  mix-blend-mode: multiply;
 }
 
 .article-container img:hover {

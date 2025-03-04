@@ -22,8 +22,8 @@ const fallbackData = {
 const Home = () => {
   return (
     <div className="home-container">
-      <Article />
       <Header data={fallbackData.header} />
+      <Article />
       <Brand data={fallbackData.brand} />
       <Footer />
     </div>
