@@ -23,8 +23,10 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header data={fallbackData.header} />
-      <div className="brand-section">
+      <div className="article-wrapper">
         <Article />
+      </div>
+      <div className="brand-section">
         <Brand data={fallbackData.brand} />
       </div>
       <Footer />

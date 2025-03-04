@@ -1,8 +1,7 @@
 .article-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .article-container a {
