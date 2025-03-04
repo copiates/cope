@@ -1,6 +1,6 @@
 import React from 'react'
 import { Header } from '../containers'
-import { Brand } from '../components'
+import { Brand , Article} from '../components'
 import { Footer } from '../containers'
 import './Home.css'
 
@@ -22,6 +22,7 @@ const fallbackData = {
 const Home = () => {
   return (
     <div className="home-container">
+      <Article />
       <Header data={fallbackData.header} />
       <Brand data={fallbackData.brand} />
       <Footer />
