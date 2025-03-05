@@ -24,31 +24,31 @@ const Services2 = () => {
               </li>
               <li>
                 GST - Goods and Services Tax Return Filing
-                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=919845643599" className="contact-btn" target="_blank" rel="noopener noreferrer">
                   Contact Us
                 </a>
               </li>
               <li>
                 PT - Professional Tax Return Filing
-                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=919845643599" className="contact-btn" target="_blank" rel="noopener noreferrer">
                   Contact Us
                 </a>
               </li>
               <li>
                 ESI - Employee State Insurance Return Filing
-                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=919845643599" className="contact-btn" target="_blank" rel="noopener noreferrer">
                   Contact Us
                 </a>
               </li>
               <li>
                 PF - Provident Fund Return Filing
-                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=919845643599" className="contact-btn" target="_blank" rel="noopener noreferrer">
                   Contact Us
                 </a>
               </li>
               <li>
                 ROC - Registrar of Companies Filing
-                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=919845643599" className="contact-btn" target="_blank" rel="noopener noreferrer">
                   Contact Us
                 </a>
               </li>

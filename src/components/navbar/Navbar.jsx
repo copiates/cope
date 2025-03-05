@@ -45,7 +45,7 @@ const Navbar = () => {
           <Link to="/about" onClick={ handleLinkClick}>About</Link>
         </div>
         <div className="navbar-contact">
-          <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" className="whatsapp-link">
+          <a href="https://api.whatsapp.com/send?phone=919845643599" target="_blank" rel="noopener noreferrer" className="whatsapp-link">
             <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon" />
           </a>
           <p>+91 9845643599</p>
