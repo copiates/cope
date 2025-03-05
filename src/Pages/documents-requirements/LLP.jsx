@@ -8,7 +8,7 @@ const LLP = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for LLP Registration</h2>
-          <h4>The following documents required for LLP Registration are:</h4>
+          <h4>The following documents required for LLP registration are:</h4>
           <div className="doc-content">
               <h4>For Partners / Promoters</h4>
               <ul>

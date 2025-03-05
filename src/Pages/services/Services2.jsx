@@ -24,33 +24,33 @@ const Services2 = () => {
               </li>
               <li>
                 GST - Goods and Services Tax Return Filing
-                <Link to="/documents/gst-documents" className="docs-btn" onClick={scrollToTop}>
-                  Documents Required
-                </Link>
+                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
               </li>
               <li>
                 PT - Professional Tax Return Filing
-                <Link to="/documents/pt-documents" className="docs-btn" onClick={scrollToTop}>
-                  Documents Required
-                </Link>
+                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
               </li>
               <li>
                 ESI - Employee State Insurance Return Filing
-                <Link to="/documents/esi-documents" className="docs-btn" onClick={scrollToTop}>
-                  Documents Required
-                </Link>
+                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
               </li>
               <li>
                 PF - Provident Fund Return Filing
-                <Link to="/documents/pf-documents" className="docs-btn" onClick={scrollToTop}>
-                  Documents Required
-                </Link>
+                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
               </li>
               <li>
                 ROC - Registrar of Companies Filing
-                <Link to="/documents/roc-documents" className="docs-btn" onClick={scrollToTop}>
-                  Documents Required
-                </Link>
+                <a href="https://www.whatsapp.com/" className="contact-btn" target="_blank" rel="noopener noreferrer">
+                  Contact Us
+                </a>
               </li>
               <li>
                 Any other filing services related to the above mentioned services

@@ -7,7 +7,7 @@ import './Home.css'
 const fallbackData = {
   header: {
     companyName: "B.V. Swami & Co, Chartered Accountants",
-    address: "No 3440, SR Harmony, 4th Cross, 10th Main Rd, Bengaluru, Karnataka-560038"
+    address: "No 3440, SR Harmony, 4th Cross, 10th Main Rd, Indiranagar, Bengaluru-560038"
   },
   brand: {
     title: "WELCOME TO OUR WEBSITE",

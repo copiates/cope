@@ -8,7 +8,7 @@ const PTR = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Professional Tax Registration</h2>
-          <p>The following information and documents are required for Professional Tax Registration:</p>
+          <p>The following information and documents are required for professional tax registration in Karnataka is:</p>
           <div className="doc-content">
             <ul>
               <li>Legal Name of Employer</li>

@@ -85,7 +85,7 @@
 }
 
 /* Document button styles */
-.docs-btn {
+.docs-btn, .contact-btn {
   background-color: #00509d;
   color: white;
   border: none;
@@ -101,14 +101,20 @@
   display: inline-block;
 }
 
-.docs-btn:hover {
+/* Contact button specific styles to match width with docs-btn */
+.contact-btn {
+  min-width: 162px; /* Set a minimum width to match the width of "Documents Required" */
+  text-align: center;
+}
+
+.docs-btn:hover, .contact-btn:hover {
   background-color: #003d75;
   transform: translateY(-1px);
   color: white;
   text-decoration: none;
 }
 
-.docs-btn:active {
+.docs-btn:active, .contact-btn:active {
   transform: translateY(0);
 }
 

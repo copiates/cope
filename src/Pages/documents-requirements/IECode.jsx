@@ -8,7 +8,7 @@ const IECode = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Import Export Code Registration</h2>
-          <p>For IEC Code Registration, the following documents are required:</p>
+          <p>For IE code registration, the following documents are required:</p>
           <div className="doc-content">
             <ul>
               <li>Individual’s, firm’s or company’s copy of PAN Card.</li>

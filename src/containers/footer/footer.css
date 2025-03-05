@@ -1,42 +1,80 @@
 .footer-container {
   background-color: #0a192f;  
-  color: #00509d;  
+  color: white;  
   padding: 3rem 2rem;
   width: 100%;
   box-sizing: border-box;
   text-align: center;
-  line-height: 1.8;
+  line-height: 1.5;
+  font-family: var(--font-family);
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-contact {
   margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-contact h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #00509d;  /* White */
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: #00b4d8;  
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
-.footer-contact p {
-  font-size: 1.4rem;
-  line-height: 2;
-  margin-bottom: 0.5rem;
-  color: #00509d;  /* Light gray */
+.footer-contact h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #00b4d8;
+  border-radius: 2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+  color: white;
 }
 
 .footer-copyright {
   text-align: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   margin-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-copyright p {
-  font-size: 1.2rem;
-  color: #00509d;  /* Lighter gray */
-  opacity: 0.8;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);  
   line-height: 1.6;
+  letter-spacing: 0.3px;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
@@ -46,15 +84,21 @@
   }
 
   .footer-contact h3 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 
-  .footer-contact p {
-    font-size: 1.2rem;
+  .contact-info {
+    gap: 0.6rem;
+  }
+
+  .contact-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
   .footer-copyright {
-    padding-top: 1.5rem;
+    padding-top: 1.2rem;
     margin-top: 1.5rem;
   }
 
