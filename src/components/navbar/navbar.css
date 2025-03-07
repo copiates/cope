@@ -130,10 +130,19 @@
   }
 }
 
+.phone-link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.phone-link:hover {
+  transform: translateY(-2px);
+}
+
 .navbar-contact p {
   font-size: 1.25rem;
   color: rgb(241, 245, 249);
-  margin: 0 0 0 -10px;
+  margin: 0;
 }
 
 .dropdown {

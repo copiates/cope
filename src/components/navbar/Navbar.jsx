@@ -48,7 +48,9 @@ const Navbar = () => {
           <a href="https://api.whatsapp.com/send?phone=919845643599" target="_blank" rel="noopener noreferrer" className="whatsapp-link">
             <img src={whatsappIcon} alt="WhatsApp" className="whatsapp-icon" />
           </a>
-          <p>+91 9845643599</p>
+          <a href="https://api.whatsapp.com/send?phone=919845643599" target="_blank" rel="noopener noreferrer" className="phone-link">
+            <p>+91 9845643599</p>
+          </a>
         </div>
       </div>
     </div>
