@@ -3,16 +3,13 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/sitemap.xml",
+      "source": "/(.*).xml",
       "headers": [
-        { "key": "Content-Type", "value": "text/xml" },
-        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+        { "key": "Content-Type", "value": "text/xml" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

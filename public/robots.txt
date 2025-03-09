@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://bvswamiandco.vercel.app/sitemap.xml
+Sitemap: https://bvswamiandco.vercel.app/sitemap.txt
