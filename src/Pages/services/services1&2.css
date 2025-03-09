@@ -103,7 +103,7 @@
 
 /* Contact button specific styles to match width with docs-btn */
 .contact-btn {
-  min-width: 162px; /* Set a minimum width to match the width of "Documents Required" */
+  min-width: 157px; 
   text-align: center;
 }
 
@@ -148,7 +148,7 @@
     transform: none;
   }
 
-  .docs-btn {
+  .docs-btn, .contact-btn {
     font-size: var(--font-size-sm);
     padding: 0.3rem 0.6rem;
     margin-left: 0;
