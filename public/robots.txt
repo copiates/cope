@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bvswamiandco.vercel.app/sitemap.xml
-Sitemap: https://bvswamiandco.vercel.app/sitemap.txt
+Sitemap: https://bvswamiandco.vercel.app/sitemap_index.xml
