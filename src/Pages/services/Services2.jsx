@@ -17,7 +17,7 @@ const Services2 = () => {
             <ul>
               <li>
                 ITR - Income Tax Return Filing
-                <Link to="/documents/itr-documents" className="docs-btn" onClick={scrollToTop}>
+                <Link to="/documents/income-filing" className="docs-btn" onClick={scrollToTop}>
                   Documents Required
                 </Link>
               </li>

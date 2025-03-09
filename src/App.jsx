@@ -87,7 +87,7 @@ const App = () => {
             <Route path="private-limited" element={<PrivateLimited />} />
             <Route path="ie-code" element={<IECode />} />
             <Route path="lei" element={<LEI />} />
-            <Route path="itr-documents" element={<ITRDocuments />} />
+            <Route path="income-filing" element={<ITRDocuments />} />
           </Route>
           {/* 404 route */}
           <Route path="*" element={<NotFound />} />
