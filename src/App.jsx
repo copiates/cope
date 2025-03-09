@@ -17,12 +17,7 @@ import {
   PrivateLimited,
   IECode,
   LEI,
-  ITRDocuments,
-  GSTDocuments,
-  PTDocuments,
-  ESIDocuments,
-  PFDocuments,
-  ROCDocuments
+  ITRDocuments
 } from './Pages/documents-requirements';
 import './App.css';
 
@@ -53,11 +48,7 @@ const App = () => {
           <Route path="ie-code" element={<IECode />} />
           <Route path="lei" element={<LEI />} />
           <Route path="itr-documents" element={<ITRDocuments />} />
-          <Route path="gst-documents" element={<GSTDocuments />} />
-          <Route path="pt-documents" element={<PTDocuments />} />
-          <Route path="esi-documents" element={<ESIDocuments />} />
-          <Route path="pf-documents" element={<PFDocuments />} />
-          <Route path="roc-documents" element={<ROCDocuments />} />
+          
         </Route>
       </Route>
     </Routes>

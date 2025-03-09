@@ -12,8 +12,4 @@ export { default as PrivateLimited } from './PrivateLimited';
 export { default as IECode } from './IECode';
 export { default as LEI } from './LEI'; 
 export { default as ITRDocuments } from './Income-Filing';
-export { default as GSTDocuments } from './GST- Filing';
-export { default as PTDocuments } from './Professional-Tax-Filing';
-export { default as ESIDocuments } from './Employee-Insurance-Filing';
-export { default as PFDocuments } from './Provident-Fund-Filing';
-export { default as ROCDocuments } from './Registrar-Companies-Filing';
+
