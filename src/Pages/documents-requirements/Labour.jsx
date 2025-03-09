@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const Labour = () => {
   return (
@@ -23,7 +22,6 @@ const Labour = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

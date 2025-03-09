@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const IECode = () => {
   return (
@@ -21,7 +20,6 @@ const IECode = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

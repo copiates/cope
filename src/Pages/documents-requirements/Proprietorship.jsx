@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const Proprietorship = () => {
   return (
@@ -21,7 +20,6 @@ const Proprietorship = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

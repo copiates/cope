@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const LLP = () => {
   return (
@@ -26,7 +25,6 @@ const LLP = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

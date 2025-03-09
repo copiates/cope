@@ -1,6 +1,5 @@
 import React from 'react';
 import './services3.css'
-import Footer from '../../containers/footer/Footer';
 
 const Services3 = () => {
   return (
@@ -23,7 +22,6 @@ const Services3 = () => {
           </ul>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

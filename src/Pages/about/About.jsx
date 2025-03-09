@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from '../../containers/footer/Footer';
 import './about.css';
 
 const fallbackData = [
@@ -44,7 +43,6 @@ const About = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

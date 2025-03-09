@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './services1&2.css';
-import Footer from '../../containers/footer/Footer';
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,7 +58,6 @@ const Services2 = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

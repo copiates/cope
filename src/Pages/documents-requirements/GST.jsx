@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const GST = () => {
   return (
@@ -75,7 +74,6 @@ const GST = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

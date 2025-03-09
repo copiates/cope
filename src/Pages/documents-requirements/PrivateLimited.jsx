@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const PrivateLimited = () => {
   return (
@@ -34,7 +33,6 @@ const PrivateLimited = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

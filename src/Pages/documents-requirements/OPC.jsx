@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const OPC = () => {
   return (
@@ -21,7 +20,6 @@ const OPC = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

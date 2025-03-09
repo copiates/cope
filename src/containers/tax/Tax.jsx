@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './tax.css';
-import Footer from '../footer/Footer';
 
 const Tax = () => {
   const [age, setAge] = useState('below60');
@@ -258,7 +257,6 @@ const Tax = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

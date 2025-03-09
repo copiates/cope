@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const Shops = () => {
   return (
@@ -37,7 +36,6 @@ const Shops = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

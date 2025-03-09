@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const ITRDocuments = () => {
   
@@ -54,7 +53,6 @@ const ITRDocuments = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };

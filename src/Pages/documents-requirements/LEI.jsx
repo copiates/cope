@@ -1,6 +1,5 @@
 import React from 'react';
 import './documents.css';
-import Footer from '../../containers/footer/Footer';
 
 const LEI = () => {
   return (
@@ -65,7 +64,6 @@ const LEI = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
