@@ -13,6 +13,5 @@
     { "src": "/(.*)", "dest": "/index.html" }
   ],
   "buildCommand": "npm install && npm run build",
-  "framework": "create-react-app",
-  "nodeVersion": "18.x"
+  "framework": "create-react-app"
 }
