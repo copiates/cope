@@ -8,7 +8,7 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <div className="contact-info">
             <p>Phone: +91 9845643599</p>
-            <p>Email: caamaranath@yahoo.com</p>
+            <p>Email: bvswamicompany@gmail.com</p>
             <p>Timings: Monday - Saturday , 10AM - 6PM</p>
           </div>
       </div>
