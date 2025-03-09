@@ -26,7 +26,7 @@ const fallbackData = [
   },
   {
     name: "CA. D MANOJ",
-    description: "A Commerce Graduate from IGNOU, Qualified ICWAI in 2018 and a Fellow Member of the Institute of Chartered Accountants of India. Qualified in 2018, he underwent his article ship training under M/s. B V Swami & Co. Chartered Accountants, Bangalore. Has Professional Experience of 7 Years & has served reputed Audit Firm N J Sures & Associates. During his article ship training he has conducted various Statutory Audits, Internal Audits and Concurrent Audits of Public sector, Government Companies & Nationalized Banks. Currently, he is undergoing a post-qualification course on \"Information Systems Audit\" conducted by the ICAI. He specializes in Management Consultancy, Project Finance / Reporting (including facilitation of loans from Financial Institutions and Major MNC Banks), Audits of Large Corporate entities."
+    description: "A Commerce Graduate from IGNOU, Qualified ICWAI in 2018 and a Fellow Member of the Institute of Chartered Accountants of India. Qualified in 2018, he underwent his article ship training under M/s. B V Swami & Co. Chartered Accountants, Bangalore. Has Professional Experience of 7 Years & has served reputed Audit Firm N J Suresh & Associates. During his article ship training he has conducted various Statutory Audits, Internal Audits and Concurrent Audits of Public sector, Government Companies & Nationalized Banks. Currently, he is undergoing a post-qualification course on \"Information Systems Audit\" conducted by the ICAI. He specializes in Management Consultancy, Project Finance / Reporting (including facilitation of loans from Financial Institutions and Major MNC Banks), Audits of Large Corporate entities."
   }
 ];
 
