@@ -3,13 +3,14 @@
     {
       "source": "/sitemap.xml",
       "headers": [
-        { "key": "Content-Type", "value": "text/xml" }
+        { "key": "Content-Type", "value": "text/xml" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/(sitemap.xml)", "destination": "/$1" },
+    { "source": "/(robots.txt)", "destination": "/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "github": {
