@@ -7,11 +7,15 @@
       ]
     }
   ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
   "routes": [
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "buildCommand": "npm install && npm run build",
-  "framework": "create-react-app"
+  ]
 }
