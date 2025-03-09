@@ -12,5 +12,7 @@
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/(.*)", "dest": "/index.html" }
   ],
-  "buildCommand": "./build.sh"
+  "buildCommand": "npm install && npm run build",
+  "framework": "create-react-app",
+  "nodeVersion": "18.x"
 }
