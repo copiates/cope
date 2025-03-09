@@ -15,6 +15,9 @@
   "name": "react-folder",
   "version": "1.0.0",
   "homepage": "/",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "Full stack project",
   "author": "Kirthan",
   "license": "ISC",
