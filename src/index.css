@@ -21,37 +21,39 @@
   --letter-spacing-normal: 0;
   --letter-spacing-wide: 0.02em;
   
-  /* Vibrant color palette */
-  --primary-color: #0066ff;    /* Bright Blue */
-  --primary-light: #3399ff;
-  --primary-dark: #0044cc;
-  --accent-color: #ff4d4d;     /* Bright Red */
-  --accent-light: #ff6666;
-  --accent-dark: #cc0000;
-  --success-color: #00cc44;    /* Bright Green */
-  --success-light: #00ff55;
-  --warning-color: #ff9900;    /* Bright Orange */
-  --warning-light: #ffad33;
-  --error-color: #ff3333;      /* Bright Red */
+  /* Enhanced vibrant color palette */
+  --primary-color: #2563eb;    /* Rich Blue */
+  --primary-light: #60a5fa;    /* Lighter Blue */
+  --primary-dark: #1e40af;     /* Darker Blue */
+  --accent-color: #f43f5e;     /* Vibrant Rose */
+  --accent-light: #fb7185;     /* Light Rose */
+  --accent-dark: #be123c;      /* Dark Rose */
+  --success-color: #10b981;    /* Emerald Green */
+  --success-light: #34d399;    /* Light Emerald */
+  --warning-color: #f59e0b;    /* Amber */
+  --warning-light: #fbbf24;    /* Light Amber */
+  --error-color: #ef4444;      /* Vibrant Red */
   --background-light: #ffffff;
-  --background-dark: #1a1a1a;
-  --text-primary: #333333;
-  --text-secondary: #666666;
+  --background-dark: #0f172a;  /* Slate 900 - deeper, more sophisticated dark */
+  --text-primary: #1e293b;     /* Slate 800 - better for readability */
+  --text-secondary: #475569;   /* Slate 600 */
   
   /* Updated gradients */
-  --gradient-primary: linear-gradient(135deg, #0066ff 0%, #3399ff 100%);
-  --gradient-accent: linear-gradient(135deg, #ff4d4d 0%, #ff6666 100%);
-  --gradient-success: linear-gradient(135deg, #00cc44 0%, #00ff55 100%);
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #60a5fa 100%);
+  --gradient-accent: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%);
+  --gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
   --box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 
-  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  /* Enhanced gradient text and bar */
+  --gradient-text: linear-gradient(89.97deg, #8b5cf6 1.84%, #ec4899 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #8b5cf6 -13.86%, #ec4899 99.55%);
   
-  --color-bg: #040C18;
-  --color-footer : #031B34;
-  --color-blog: #042c54;
-  --color-text: #81AFDD;
-  --color-subtext: #FF8A71;
+  /* Enhanced background and footer colors */
+  --color-bg: #0f172a;          /* Slate 900 */
+  --color-footer: #1e293b;      /* Slate 800 */
+  --color-blog: #334155;        /* Slate 700 */
+  --color-text: #94a3b8;        /* Slate 400 */
+  --color-subtext: #f43f5e;     /* Rose 500 */
 }
 
 /* Apply base font family to all elements */

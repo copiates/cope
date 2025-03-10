@@ -5,28 +5,29 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(180deg, rgb(71, 85, 105) 0%, rgb(100, 116, 139) 100%);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .tax-banner {
-  background: rgb(30, 41, 59);
+  background: var(--background-dark);
   padding: 10px 0;
   text-align: center;
   width: 100%;
 }
 
 .tax-banner a {
-  color: rgb(229, 231, 235);
+  color: var(--background-light);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.5px;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tax-banner a:hover {
-  opacity: 0.8;
+  color: var(--primary-light);
+  opacity: 1;
 }
 
 .navbar {
@@ -71,16 +72,33 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: rgb(241, 245, 249);
+  color: var(--background-light);
   font-size: 1.5rem;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
   font-weight: 600;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: var(--accent-light);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .navbar-links a:hover {
-  color: #00509d;
+  color: var(--accent-light);
   transform: translateY(-2px);
+}
+
+.navbar-links a:hover::after {
+  width: 70%;
 }
 
 .navbar-contact {
@@ -141,7 +159,7 @@
 
 .navbar-contact p {
   font-size: 1.25rem;
-  color: rgb(241, 245, 249);
+  color: var(--background-light);
   margin: 0;
 }
 
@@ -153,7 +171,7 @@
 .dropdown-button {
   background: none;
   border: none;
-  color: rgb(241, 245, 249);
+  color: var(--background-light);
   font-size: 1.5rem;
   font-weight: 600;
   padding: 0.5rem 1rem;
@@ -161,14 +179,31 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  position: relative;
+}
+
+.dropdown-button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background: var(--accent-light);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .dropdown-button:hover {
-  color: #00509d;
+  color: var(--accent-light);
+}
+
+.dropdown-button:hover::after {
+  width: 70%;
 }
 
 .arrow {
-  border: solid rgb(241, 245, 249);
+  border: solid var(--background-light);
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
@@ -178,11 +213,12 @@
 
 .dropdown:hover .arrow {
   transform: rotate(-135deg);
+  border-color: var(--accent-light);
 }
 
 .dropdown-content {
   position: absolute;
-  background: rgb(100, 116, 139);
+  background: var(--primary-color);
   min-width: 160px;
   box-shadow: var(--box-shadow);
   border-radius: 8px;
@@ -192,7 +228,7 @@
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
-  border: 1px solid rgba(241, 245, 249, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .dropdown:hover .dropdown-content {
@@ -202,7 +238,7 @@
 }
 
 .dropdown-content a {
-  color: rgb(241, 245, 249);
+  color: var(--background-light);
   padding: 6px 10px;
   text-decoration: none;
   display: block;
@@ -213,8 +249,8 @@
 }
 
 .dropdown-content a:hover {
-  background: rgba(241, 245, 249, 0.1);
-  color: #00509d;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-light);
 }
 
 @media screen and (max-width: 768px) {
@@ -270,8 +306,8 @@
     max-height: calc(100vh - 200px);
     overflow-y: auto;
     margin: 0;
-    background-color: rgb(100, 116, 139);
-    border: 1px solid rgba(241, 245, 249, 0.1);
+    background-color: var(--primary-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
@@ -285,9 +321,9 @@
     padding: 8px 12px;
     text-align: left;
     font-size: 0.8rem;
-    border-bottom: 1px solid rgba(241, 245, 249, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     white-space: nowrap;
-    color: rgb(241, 245, 249);
+    color: var(--background-light);
   }
 
   .navbar-contact {

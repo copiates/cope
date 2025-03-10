@@ -3,16 +3,30 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  background: linear-gradient(180deg, rgb(100, 116, 139) 0%, rgb(148, 163, 184) 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
   padding: 15px;
   flex-wrap: wrap;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
 }
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-bar);
+  opacity: 0.7;
+}
+
 .practice-name {
   flex: 1;
   font-family: var(--font-family);
   font-size: var(--font-size-2xl);
-  color: rgb(241, 245, 249);
+  color: var(--background-light);
   text-align: center;
   min-width: 300px;
   margin: 0.5rem;
@@ -21,13 +35,14 @@
   hyphens: auto;
   font-weight: 600;
   letter-spacing: var(--letter-spacing-tight);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .practice-address {
   flex: 1;
   font-family: var(--font-family);
   text-align: justify;
-  color: rgb(226, 232, 240);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0.5rem;
   font-size: var(--font-size-base);
   word-wrap: break-word;
@@ -40,7 +55,7 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    background: linear-gradient(180deg, rgb(100, 116, 139) 0%, rgb(148, 163, 184) 100%);
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%);
   }
 
   .practice-name {
