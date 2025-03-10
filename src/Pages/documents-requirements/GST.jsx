@@ -7,7 +7,7 @@ const GST = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for GST Registration</h2>
-          <h3>Documents required for GST registration based on the business structure:</h3>
+          <h4>Documents required for GST registration based on the business structure:</h4>
           <div className="doc-content">
             <h4>Proprietorship</h4>
             <ul>
