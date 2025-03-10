@@ -26,19 +26,24 @@
     <style>
       /* Critical styles for LCP element */
       .brand-new p:first-child, .lcp-priority {
-        color: rgb(55, 65, 81);
-        line-height: 1.8;
+        color: var(--text-secondary, rgb(55, 65, 81));
+        line-height: var(--line-height-relaxed, 1.8);
         font-display: swap;
         content-visibility: visible;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 1.5rem;
       }
       .brand-new {
         margin: auto;
         width: 100%;
         max-width: 600px;
-        background: rgb(255, 255, 255);
+        background: white;
         border-radius: 16px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        padding: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+        padding: 2.5rem;
+        position: relative;
+        overflow: hidden;
       }
     </style>
   </head>

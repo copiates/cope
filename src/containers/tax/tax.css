@@ -1,80 +1,181 @@
-.tax-calculator {
-  max-width: 800px;
-  margin: 2rem auto;
+.tax-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
+  min-height: calc(100vh - 180px);
+  background: linear-gradient(to bottom, var(--background-light), #f3f4f8);
+}
+
+.tax-calculator {
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  min-height: calc(100vh - 200px);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tax-calculator:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08), 0 10px 15px rgba(0, 0, 0, 0.03);
 }
 
 .tax-calculator h2 {
+  color: var(--primary-color);
   text-align: center;
-  color: #00509d;
+  font-size: var(--font-size-2xl);
   margin-bottom: 2rem;
-  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-tight);
 }
 
-.tax-calculator h3 {
-  color: #00509d;
-  margin: 1.5rem 0 1rem;
-  font-size: 1.4rem;
+.tax-calculator h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--gradient-bar);
+  border-radius: 2px;
 }
 
-.input-group {
-  margin-bottom: 1rem;
+.tax-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.input-group label {
-  display: block;
+.tax-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tax-input-group label {
   font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--text-primary);
+  font-size: var(--font-size-base);
 }
 
-.input-group input,
-.input-group select {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
+.tax-input-group input,
+.tax-input-group select {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+  color: var(--text-primary);
 }
 
-.input-group input:focus,
-.input-group select:focus {
+.tax-input-group input:focus,
+.tax-input-group select:focus {
   outline: none;
-  border-color: #00509d;
-  box-shadow: 0 0 0 2px rgba(0, 80, 157, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
-.calculate-btn {
-  width: 100%;
-  padding: 0.8rem;
-  background: #00509d;
+.tax-input-group input::placeholder {
+  color: #9ca3af;
+}
+
+.tax-button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: var(--gradient-primary);
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: var(--font-size-base);
   cursor: pointer;
-  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.calculate-btn:hover {
-  background: #003d75;
+.tax-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-.result {
+.tax-button:active {
+  transform: translateY(0);
+}
+
+.tax-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+}
+
+.tax-button:hover::before {
+  left: 100%;
+}
+
+.tax-results {
   margin-top: 2rem;
   padding: 1.5rem;
-  background: #f8f9fa;
-  border-radius: 8px;
+  background: rgba(96, 165, 250, 0.05);
+  border-radius: 12px;
+  border-left: 3px solid var(--primary-color);
 }
 
-.result h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.tax-result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tax-result-item:last-child {
+  border-bottom: none;
+}
+
+.tax-result-label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tax-result-value {
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+.tax-total {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tax-total-label {
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+}
+
+.tax-total-value {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  color: var(--success-color);
 }
 
 .regime-comparison {
@@ -93,7 +194,7 @@
 
 .old-regime h4,
 .new-regime h4 {
-  color: #00509d;
+  color: var(--primary-color);
   margin-bottom: 1rem;
   font-size: 1.2rem;
   text-align: center;
@@ -102,26 +203,47 @@
 .old-regime p,
 .new-regime p {
   margin: 0.5rem 0;
-  color: #333;
+  color: var(--text-primary);
   font-size: 1rem;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
+  .tax-container {
+    padding: 1.5rem 1rem;
+  }
+
   .tax-calculator {
-    margin: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .tax-calculator h2 {
+    font-size: calc(var(--font-size-2xl) - 0.2rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .tax-form {
+    gap: 1rem;
+  }
+
+  .tax-input-group input,
+  .tax-input-group select {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .tax-button {
+    padding: 0.7rem 1.2rem;
+  }
+
+  .tax-results {
+    padding: 1.2rem;
+  }
+
+  .tax-total {
+    padding: 0.8rem;
   }
 
   .regime-comparison {
     grid-template-columns: 1fr;
-  }
-
-  .tax-calculator h2 {
-    font-size: 1.5rem;
-  }
-
-  .tax-calculator h3 {
-    font-size: 1.2rem;
   }
 }

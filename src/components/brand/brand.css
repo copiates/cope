@@ -2,12 +2,14 @@
   margin: auto;
   width: 100%;
   max-width: 600px;
-  background: rgb(255, 255, 255);  
+  background: white;  
   border-radius: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: justify;
+  position: relative;
+  overflow: hidden;
   /* Add priority hints for LCP optimization */
   content-visibility: auto;
   contain-intrinsic-size: 0 500px; /* Approximate size reservation */
@@ -15,41 +17,65 @@
 
 .brand-new:hover {
   transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08), 0 10px 15px rgba(0, 0, 0, 0.03);
+}
+
+.brand-new::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .brand-new h2 {
   text-align: center;
-  color: #00509d;  
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  color: var(--primary-color);  
+  font-size: var(--font-size-2xl);
+  margin-bottom: 1.8rem;
   position: relative;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing-tight);
+  z-index: 1;
 }
 
 .brand-new h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 4px;
-  background: rgb(31, 41, 55);  
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-bar);
   border-radius: 2px;
 }
 
 .brand-new p {
-  color: rgb(55, 65, 81);  
-  line-height: 1.8;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
 }
 
 /* Optimize the LCP element (first paragraph) */
 .brand-new p:first-child {
-  color: rgb(55, 65, 81);
-  line-height: 1.8;
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
   font-display: swap;
   contain: layout;
   content-visibility: visible;
   will-change: auto;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-base);
 }
 
 .brand-wrapper {
@@ -57,24 +83,30 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to bottom, var(--background-light), #f3f4f8);
+  min-height: calc(100vh - 180px);
 }
 
 @media screen and (max-width: 768px) {
   .brand-wrapper {
     width: 100%;
+    padding: 1.5rem 1rem;
   }
 
   .brand-new {
-    width: 90%;
-    margin: 15px auto;
-    padding: 15px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem;
+    border-radius: 12px;
   }
 
   .brand-new h2 {
-    font-size: 20px;
+    font-size: calc(var(--font-size-2xl) - 0.2rem);
+    margin-bottom: 1.5rem;
   }
 
   .brand-new p {
-    font-size: 0.9rem;
+    font-size: calc(var(--font-size-base) - 0.05rem);
   }
 }
