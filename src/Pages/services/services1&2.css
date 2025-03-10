@@ -9,18 +9,18 @@
 
 .services-heading {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   width: 100%;
 }
 
 .services-heading h2 {
   color: var(--primary-color);
-  font-size: var(--font-size-3xl);
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
   font-weight: 700;
   position: relative;
   display: inline-block;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .services-heading h2::after {
@@ -36,31 +36,29 @@
 
 .services-heading p {
   color: var(--text-secondary);
-  font-size: var(--font-size-lg);
+  font-size: 1.1rem;
   max-width: 800px;
   margin: 0 auto;
-  line-height: var(--line-height-relaxed);
+  line-height: 1.7;
 }
 
 .services-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   width: 100%;
   max-width: 1200px;
 }
 
 .service-card {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
-  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
   width: 100%;
   max-width: 350px;
   position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
@@ -82,11 +80,11 @@
 
 .service-card h3 {
   color: var(--primary-color);
-  font-size: var(--font-size-xl);
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
   position: relative;
   display: inline-block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
   z-index: 1;
 }
 
@@ -95,7 +93,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
+  width: 30px;
   height: 2px;
   background: var(--accent-color);
   border-radius: 2px;
@@ -103,8 +101,8 @@
 
 .service-card p {
   color: var(--text-secondary);
-  line-height: var(--line-height-relaxed);
-  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
   position: relative;
   z-index: 1;
 }
@@ -112,18 +110,17 @@
 .service-card ul {
   list-style-type: none;
   padding-left: 0;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   position: relative;
   z-index: 1;
 }
 
 .service-card ul li {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
   color: var(--text-secondary);
-  line-height: var(--line-height-normal);
-  font-size: var(--font-size-base);
+  line-height: 1.6;
 }
 
 .service-card ul li::before {
@@ -131,8 +128,8 @@
   position: absolute;
   left: 0;
   top: 0.5rem;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
   background: var(--accent-color);
   border-radius: 50%;
   transition: transform 0.2s ease;
@@ -145,14 +142,14 @@
 
 .service-link {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
   background: var(--gradient-primary);
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: var(--font-size-base);
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -181,43 +178,44 @@
 
 @media screen and (max-width: 768px) {
   .services-container {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .services-heading {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .services-heading h2 {
-    font-size: var(--font-size-2xl);
+    font-size: 1.6rem;
   }
 
   .services-heading p {
-    font-size: var(--font-size-base);
+    font-size: 1rem;
   }
 
   .services-content {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .service-card {
-    padding: 1.5rem;
+    padding: 1.2rem;
     max-width: 100%;
   }
 
   .service-card h3 {
-    font-size: var(--font-size-lg);
-    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
   }
 
   .service-card ul li {
-    padding-left: 1.2rem;
-    margin-bottom: 0.6rem;
-    font-size: calc(var(--font-size-base) - 0.05rem);
+    font-size: 0.9rem;
   }
 
   .service-link {
-    padding: 0.6rem 1.2rem;
-    font-size: calc(var(--font-size-base) - 0.05rem);
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
 }

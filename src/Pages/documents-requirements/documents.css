@@ -9,9 +9,9 @@
 
 .doc-card {
   background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 5px 10px rgba(0, 0, 0, 0.02);
-  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
   width: 100%;
   max-width: 800px;
   margin: auto;
@@ -28,10 +28,10 @@
 .doc-card h2 {
   color: var(--primary-color);
   text-align: center;
-  font-size: var(--font-size-2xl);
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
   position: relative;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   font-weight: 600;
   letter-spacing: var(--letter-spacing-tight);
 }
@@ -42,7 +42,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 50px;
   height: 3px;
   background: var(--gradient-bar);
   border-radius: 2px;
@@ -50,19 +50,19 @@
 
 .doc-card > h4 {
   color: var(--primary-dark);
-  font-size: var(--font-size-lg);
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
   font-weight: 500;
 }
 
 .doc-content h3 {
   color: var(--primary-dark);
-  font-size: var(--font-size-xl);
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
   position: relative;
   display: inline-block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
 }
 
 .doc-content h3::after {
@@ -70,19 +70,19 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 40px;
+  width: 30px;
   height: 2px;
   background: var(--accent-color);
   border-radius: 2px;
 }
 
 .doc-content {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .doc-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
   background: rgba(96, 165, 250, 0.05);
   border-radius: 12px;
   border-left: 3px solid var(--primary-color);
@@ -97,21 +97,21 @@
 
 .doc-section h4 {
   color: var(--primary-dark);
-  font-size: var(--font-size-lg);
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
   font-weight: 500;
 }
 
 .doc-section ul {
   list-style-type: none;
   padding-left: 0;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .doc-section ul li {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.6rem;
   color: var(--text-secondary);
   line-height: var(--line-height-normal);
   font-size: var(--font-size-base);
@@ -122,8 +122,8 @@
   position: absolute;
   left: 0;
   top: 0.5rem;
-  width: 0.6rem;
-  height: 0.6rem;
+  width: 0.5rem;
+  height: 0.5rem;
   background: var(--accent-color);
   border-radius: 50%;
   transition: transform 0.2s ease;
@@ -135,8 +135,8 @@
 }
 
 .doc-note {
-  margin-top: 2rem;
-  padding: 1.2rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
   background: rgba(244, 63, 94, 0.05);
   border-radius: 12px;
   border-left: 3px solid var(--accent-color);
@@ -151,35 +151,35 @@
 
 @media screen and (max-width: 768px) {
   .doc-container {
-    padding: 1.5rem 1rem;
+    padding: 1rem;
   }
 
   .doc-card {
-    padding: 1.5rem;
-    border-radius: 12px;
+    padding: 1.2rem;
+    border-radius: 8px;
   }
 
   .doc-card h2 {
-    font-size: calc(var(--font-size-2xl) - 0.2rem);
-    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .doc-content h3 {
-    font-size: var(--font-size-lg);
+    font-size: 1.2rem;
   }
 
   .doc-section {
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
   }
 
   .doc-section h4 {
-    font-size: var(--font-size-base);
+    font-size: 1rem;
   }
 
   .doc-section ul li {
-    padding-left: 1.2rem;
-    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
     font-size: calc(var(--font-size-base) - 0.05rem);
   }
 }
