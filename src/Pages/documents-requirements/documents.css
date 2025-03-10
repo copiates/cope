@@ -4,7 +4,7 @@
   align-items: flex-start;
   padding: 2rem;
   min-height: calc(100vh - 180px);
-  background-color: rgb(243, 244, 246);
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
 }
 
 .doc-card {
@@ -18,7 +18,7 @@
 }
 
 .doc-card h2 {
-  color: #00509d;
+  color: #2563eb;
   text-align: center;
   font-size: var(--font-size-2xl);
   margin-bottom: 2rem;
@@ -36,24 +36,24 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: #00509d;
+  background: linear-gradient(to right, #2563eb, #60a5fa);
   border-radius: 2px;
 }
 
 .doc-card > h4 {
-  color: #1a365d;
+  color: #1e40af;
   font-size: var(--font-size-lg);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
 
 .doc-content h3 {
-  color: #1a365d;
+  color: #1e40af;
   font-size: calc(var(--font-size-lg) * 1.15);
   margin: 2.5rem 0 1.5rem;
   font-weight: 600;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid #00509d;
+  border-bottom: 2px solid #2563eb;
   position: relative;
 }
 
@@ -64,7 +64,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: #4299e1;
+  background: #f43f5e;
 }
 
 .doc-content h3:first-of-type {
@@ -80,7 +80,7 @@
   font-size: var(--font-size-lg);
   margin: 2rem 0 1rem;
   font-weight: 500;
-  border-left: 3px solid #00509d;
+  border-left: 3px solid #2563eb;
   padding-left: 1rem;
 }
 
@@ -105,12 +105,12 @@
   position: relative;
   font-size: var(--font-size-base);
   line-height: 1.6;
-  color: rgb(55, 65, 81);
+  color: #475569;
 }
 
 .doc-content ul li:before {
   content: "•";
-  color: #00509d;
+  color: #f43f5e;
   position: absolute;
   left: 0;
   top: 50%;
@@ -119,8 +119,8 @@
 }
 
 .doc-content ul li:hover {
-  color: #2c5282;
-  background-color: rgba(0, 80, 157, 0.05);
+  color: #1e40af;
+  background-color: rgba(37, 99, 235, 0.05);
   border-radius: 4px;
   transition: all 0.2s ease;
 }
@@ -156,4 +156,4 @@
     padding: 0.6rem 0;
     padding-left: 1.2rem;
   }
-} 
+}
