@@ -17,14 +17,14 @@ html, body, #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 .main-content {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 /* Page specific containers */
@@ -32,7 +32,7 @@ html, body, #root {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 .services-container,
@@ -42,7 +42,7 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 200px); /* Adjust based on your navbar height */
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 .gradient__bg {
@@ -52,7 +52,7 @@ html, body, #root {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 /* Footer positioning */
@@ -70,7 +70,7 @@ html, body, #root {
   flex-direction: column;
   overflow-x: hidden;
   position: relative;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 html, body {
@@ -91,12 +91,12 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 .container {
   flex: 1;
-  background-color: var(--background-light);
+  background-color: rgb(15, 23, 42);
 }
 
 /* Update all container backgrounds */
@@ -110,7 +110,7 @@ main {
 .App,
 main,
 .container {
-  background-color: var(--background-light);  /* Use CSS variable instead of hardcoded color */
+  background-color: rgb(243, 244, 246);  /* Light gray background */
 }
 
 /* Height-based media queries */
