@@ -19,7 +19,28 @@
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" />
     </noscript>
+    <!-- Preload critical CSS -->
+    <link rel="preload" href="%PUBLIC_URL%/static/css/main.chunk.css" as="style" />
     <title>BV Swami & Co</title>
+    <!-- Inline critical CSS for LCP -->
+    <style>
+      /* Critical styles for LCP element */
+      .brand-new p:first-child, .lcp-priority {
+        color: rgb(55, 65, 81);
+        line-height: 1.8;
+        font-display: swap;
+        content-visibility: visible;
+      }
+      .brand-new {
+        margin: auto;
+        width: 100%;
+        max-width: 600px;
+        background: rgb(255, 255, 255);
+        border-radius: 16px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

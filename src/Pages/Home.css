@@ -17,6 +17,14 @@
   background-color: #f5f5f5;
 }
 
+/* Optimize LCP element */
+.lcp-element {
+  display: block;
+  will-change: auto;
+  contain: paint;
+  font-display: swap;
+}
+
 .footer-container {
   margin-top: auto;
   width: 100%;

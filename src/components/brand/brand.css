@@ -8,6 +8,9 @@
   padding: 2rem;
   transition: transform 0.3s ease;
   text-align: justify;
+  /* Add priority hints for LCP optimization */
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px; /* Approximate size reservation */
 }
 
 .brand-new:hover {
@@ -37,6 +40,16 @@
 .brand-new p {
   color: rgb(55, 65, 81);  
   line-height: 1.8;
+}
+
+/* Optimize the LCP element (first paragraph) */
+.brand-new p:first-child {
+  color: rgb(55, 65, 81);
+  line-height: 1.8;
+  font-display: swap;
+  contain: layout;
+  content-visibility: visible;
+  will-change: auto;
 }
 
 .brand-wrapper {

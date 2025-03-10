@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Header } from '../containers'
 import { Brand, Article } from '../components'
 import './Home.css'
@@ -19,6 +19,26 @@ const fallbackData = {
 };
 
 const Home = () => {
+  // Use useEffect to mark the LCP element for priority rendering
+  useEffect(() => {
+    // Add priority hints for the LCP element
+    const addPriorityHints = () => {
+      const lcpElement = document.querySelector('.brand-new p');
+      if (lcpElement) {
+        // Mark this element as high priority for the browser
+        if ('loading' in HTMLImageElement.prototype) {
+          lcpElement.setAttribute('fetchpriority', 'high');
+        }
+        // Add a class for styling priority
+        lcpElement.classList.add('lcp-element');
+      }
+    };
+    
+    // Execute immediately and also after a small delay to ensure DOM is ready
+    addPriorityHints();
+    setTimeout(addPriorityHints, 0);
+  }, []);
+
   return (
     <div className="home-container">
       <Header data={fallbackData.header} />
