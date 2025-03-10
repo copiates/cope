@@ -7,7 +7,7 @@ const GST = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for GST Registration</h2>
-          <h4>documents required for GST registration based on the business structure:</h4>
+          <h4>Documents required for GST registration based on the business structure:</h4>
           <div className="doc-content">
             <h4>Proprietorship</h4>
             <ul>
@@ -44,7 +44,7 @@ const GST = () => {
               <li>PAN card and Aadhar card of authorized signatory. The authorised signatory must be an Indian even in case of foreign companies/branch registration</li>
             </ul>
 
-            <h3>documents required for GST registration based on the nature of business activity:</h3>
+            <h3>Documents required for GST registration based on the nature of business activity:</h3>
 
             <h4>Normal taxpayer Registration (including composition dealer, government departments and ISD registrations)</h4>
             <ul>

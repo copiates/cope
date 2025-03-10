@@ -7,7 +7,7 @@ const Labour = () => {
       <div className="doc-container">
         <div className="doc-card">
           <h2>Documents Required for Labour Registration</h2>
-          <p>following documents required for labour license Registration application are:</p>
+          <p>The following documents required for labour license Registration application are:</p>
           <div className="doc-content">
             <ul>
               <li>PAN Card of Applicant</li>
