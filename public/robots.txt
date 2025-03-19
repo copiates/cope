@@ -4,3 +4,11 @@ Allow: /
 
 # Sitemap location
 Sitemap: https://bvswamiandco.site/sitemap.xml
+
+# Vercel preview domain - disallow all crawling
+Host: bvswamiandco.site
+
+# Explicitly disallow indexing of Vercel preview domain
+User-agent: *
+Disallow: /
+Host: bvswamiandco.vercel.app
