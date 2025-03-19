@@ -1,11 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "package.json", "use": "@vercel/node" }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
     {
@@ -39,6 +35,7 @@
       ]
     }
   ],
+  "trailingSlash": false,
   "git": {
     "deploymentEnabled": {
       "gh-pages": false,
