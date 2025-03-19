@@ -3,9 +3,3 @@ node_modules
 .github
 .vscode
 README.md
-"git": {
-  "deploymentEnabled": {
-    "gh-pages": false,
-    "main": true
-  }
-}
