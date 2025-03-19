@@ -14,6 +14,7 @@ const CanonicalTag = ({
   const isVercel = hostname.includes('.vercel.app');
 
   const canonicalPath = path || location.pathname;
+  
 
   const canonicalUrl =
     canonicalPath === '/'
