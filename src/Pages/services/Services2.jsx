@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './services1&2.css';
+import PageMetadata from '../../components/PageMetadata';
 
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -9,6 +10,11 @@ const scrollToTop = () => {
 const Services2 = () => {
   return (
     <div>
+      <PageMetadata 
+        title="Filing Services | BV Swami & Co"
+        description="Professional filing services for Income Tax Returns, GST Returns, Professional Tax, and other regulatory filings in India."
+        canonicalPath="/services/filing"
+      />
       <div className="services-container">
         <div className="service-card">
           <h3>Filing Services</h3>

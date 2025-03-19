@@ -1,9 +1,15 @@
 import React from 'react';
-import './services3.css'
+import './services3.css';
+import PageMetadata from '../../components/PageMetadata';
 
 const Services3 = () => {
   return (
     <div>
+      <PageMetadata 
+        title="Financial Services | BV Swami & Co"
+        description="Professional financial services including project reports for bank loans, mortgage loans, overdraft loans, cash credit loans, and other financial consultation."
+        canonicalPath="/services/financial-services"
+      />
       <div className="services-container">
         <div className="brand">
           <h2>Financial Services</h2>
